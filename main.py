@@ -41,6 +41,9 @@ class Main(QMainWindow):
         self.menu_bar.save_as_action.triggered.connect(
             lambda save_as: self.file_manager.save_as(self.editor.text())
         )
+        self.menu_bar.open_folder_action.triggered.connect(
+            lambda open_foulder: self.file_tree.set_path(self.file_manager.open_folder())
+        )
         self.menu_bar.save_action.triggered.connect(
             lambda save: self.file_manager.save(self.editor.text())
         )

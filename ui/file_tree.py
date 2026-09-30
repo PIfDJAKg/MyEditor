@@ -22,3 +22,7 @@ class FileTree(QTreeView):
         self.setColumnHidden(1, True)
         self.setColumnHidden(2, True)
         self.setColumnHidden(3, True)
+
+    def set_path(self, path:str) -> None:
+        self.model.setRootPath(path)
+        self.setRootIndex(self.model.index(path))

@@ -60,6 +60,17 @@ class Manager:
         self.last_file_path = ""
         editor.setText("")
 
+    def open_folder(self) -> str:
+        folder = QFileDialog.getExistingDirectory(
+            parent = None,
+            caption = "Открыть папку",
+            directory = "C:\\"
+        )
+
+        if folder:
+            return folder
+        return "C:\\"
+
     def _get_encoding(self, path:str) -> str:
         with open(path, "rb") as open_file:
             byte_data = open_file.read(6000)

@@ -10,6 +10,7 @@ class MenuBar(QMenuBar):
 
         self.new_file_action = QAction("New file", self)
         self.open_file_action = QAction("Open file", self)
+        self.open_folder_action = QAction("Open folder", self)
         self.save_action = QAction("Save", self)
         self.save_as_action = QAction("Save as", self)
         self.close_file_action = QAction("Close file", self)
@@ -17,6 +18,7 @@ class MenuBar(QMenuBar):
 
         self.file_menu.addAction(self.new_file_action)
         self.file_menu.addAction(self.open_file_action)
+        self.file_menu.addAction(self.open_folder_action)
         self.file_menu.addSeparator()
         self.file_menu.addAction(self.save_action)
         self.file_menu.addAction(self.save_as_action)
